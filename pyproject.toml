@@ -1,0 +1,53 @@
+[project]
+name = "sturdy-barnacle"
+version = "0.1.0"
+description = "TBD"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "Tejas T A" },
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "torch",
+  "torchvision",
+  "Pillow",
+  "tqdm",
+  "python-dotenv",
+  "jupyter",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "black",
+  "mypy",
+]
+
+[project.urls]
+Repository = "https://github.com/Tejas-TA/sturdy-barnacle"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+select = ["E", "F", "I", "UP"]
+ignore = []
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
