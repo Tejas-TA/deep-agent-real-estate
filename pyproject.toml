@@ -18,6 +18,7 @@ dependencies = [
   "tqdm",
   "python-dotenv",
   "jupyter",
+  "pinecone",
 ]
 
 [project.optional-dependencies]
