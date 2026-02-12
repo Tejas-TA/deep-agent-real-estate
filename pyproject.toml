@@ -24,6 +24,8 @@ dependencies = [
   "langchain-openai",
   "ipykernel",
   "ipywidgets",
+  "gradio",
+  "packaging",
 ]
 
 [project.optional-dependencies]
