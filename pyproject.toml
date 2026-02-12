@@ -3,7 +3,7 @@ name = "sturdy-barnacle"
 version = "0.1.0"
 description = "TBD"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 license = "MIT"
 authors = [
   { name = "Tejas T A" },
@@ -19,6 +19,9 @@ dependencies = [
   "python-dotenv",
   "jupyter",
   "pinecone",
+  "python-docx",
+  "langchain-text-splitters",
+  "langchain-openai",
 ]
 
 [project.optional-dependencies]
@@ -37,7 +40,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv]
-package = true
+package = false
 
 [tool.ruff]
 line-length = 88
