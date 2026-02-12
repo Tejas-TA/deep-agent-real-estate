@@ -23,6 +23,7 @@ dependencies = [
   "langchain-text-splitters",
   "langchain-openai",
   "ipykernel",
+  "ipywidgets",
 ]
 
 [project.optional-dependencies]
