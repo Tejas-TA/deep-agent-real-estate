@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r4_c2_processed_by_imagy.png",
+  "damage_type": "Electrical wire damage",
+  "affected_system": "electrical",
+  "location": "Front Porch",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$200-$500",
+  "secondary_damage_risk": "Potential electrical hazards, increased risk of fire",
+  "maintenance_summary": "The exposed and damaged electrical wiring poses a safety risk. Recommend immediate inspection by a licensed electrician and replacement of the damaged wires."
+}

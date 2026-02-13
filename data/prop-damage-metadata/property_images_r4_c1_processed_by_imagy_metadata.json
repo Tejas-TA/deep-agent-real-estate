@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r4_c1_processed_by_imagy.png",
+  "damage_type": "Corrosion and Water Leakage",
+  "affected_system": "plumbing",
+  "location": "Utility Room",
+  "severity": 7,
+  "urgency": "immediate",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1000-$3000",
+  "secondary_damage_risk": "Potential for mold growth and flooring damage",
+  "maintenance_summary": "The water heater shows significant corrosion and leakage, which poses a risk of failure and water damage. Immediate replacement or repair of the unit is recommended to prevent further damage."
+}

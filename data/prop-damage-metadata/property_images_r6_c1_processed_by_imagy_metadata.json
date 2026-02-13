@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r6_c1_processed_by_imagy.png",
+  "damage_type": "Paint Peeling",
+  "affected_system": "cosmetic",
+  "location": "Exterior Window Frame",
+  "severity": 3,
+  "urgency": "monitor",
+  "visible_area_affected": "small",
+  "estimated_repair_cost": "$200-$500",
+  "secondary_damage_risk": "Moisture intrusion leading to rot or insect damage",
+  "maintenance_summary": "The window frame shows minor cosmetic paint peeling. Regular monitoring is advised to prevent potential moisture issues. Minor repainting is recommended."
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r6_c4_processed_by_imagy.png",
+  "damage_type": "Broken Fence",
+  "affected_system": "structural",
+  "location": "Backyard",
+  "severity": 4,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$200-$600",
+  "secondary_damage_risk": "Security issues and potential degradation of surrounding landscape",
+  "maintenance_summary": "The fence shows signs of significant damage with a broken segment that could compromise security and aesthetics. It is advisable to repair or replace the damaged sections to restore the integrity of the property."
+}

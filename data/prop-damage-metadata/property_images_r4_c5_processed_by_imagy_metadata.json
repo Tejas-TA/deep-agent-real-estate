@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r4_c5_processed_by_imagy.png",
+  "damage_type": "HVAC Corrosion",
+  "affected_system": "electrical",
+  "location": "Electrical Panel",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "small",
+  "estimated_repair_cost": "$300-$800",
+  "secondary_damage_risk": "Electrical failure, fire hazard",
+  "maintenance_summary": "The electrical panel shows signs of corrosion and potential wear. Recommend immediate inspection by a licensed electrician to assess functionality and safety. Cleaning and possible component replacement may be necessary."
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r1_c6_processed_by_imagy.png",
+  "damage_type": "Roof Shingle Deterioration",
+  "affected_system": "roofing",
+  "location": "Upper Roof Area",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1500-$3000",
+  "secondary_damage_risk": "Leaks leading to interior water damage",
+  "maintenance_summary": "The roof shingles show signs of wear and potential deterioration. It is recommended to perform a detailed inspection to assess the extent of damage and consider repair or replacement of affected areas to prevent further leaks."
+}

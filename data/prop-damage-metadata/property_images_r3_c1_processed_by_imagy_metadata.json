@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r3_c1_processed_by_imagy.png",
+  "damage_type": "Water Leakage",
+  "affected_system": "plumbing",
+  "location": "Utility Room",
+  "severity": 8,
+  "urgency": "immediate",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1500-$3000",
+  "secondary_damage_risk": "Mold growth, structural damage to flooring",
+  "maintenance_summary": "The water heater is leaking, potentially leading to water damage and mold growth. Immediate repairs are needed to fix the leak and assess the flooring for any structural integrity issues."
+}

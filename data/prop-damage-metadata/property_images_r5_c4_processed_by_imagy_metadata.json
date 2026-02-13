@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r5_c4_processed_by_imagy.png",
+  "damage_type": "Concrete Cracking",
+  "affected_system": "structural",
+  "location": "Carport",
+  "severity": 5,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1000-$2500",
+  "secondary_damage_risk": "Further cracking, water pooling, and potential safety hazards",
+  "maintenance_summary": "The concrete surface shows signs of cracking which may pose safety concerns. Recommend sealing the cracks and possibly resurfacing to prevent further damage."
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r6_c5_processed_by_imagy.png",
+  "damage_type": "Fence Damage",
+  "affected_system": "structural",
+  "location": "Backyard",
+  "severity": 4,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$300-$800",
+  "secondary_damage_risk": "Further deterioration, possible property disputes",
+  "maintenance_summary": "The fence is leaning and partially collapsed, indicating structural instability. It is recommended to repair or replace the damaged sections to maintain property boundaries and prevent potential issues."
+}

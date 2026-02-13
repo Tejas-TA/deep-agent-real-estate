@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r2_c6_processed_by_imagy.png",
+  "damage_type": "Cracked Window Frame",
+  "affected_system": "structural",
+  "location": "Exterior Wall near Window",
+  "severity": 4,
+  "urgency": "short-term",
+  "visible_area_affected": "small",
+  "estimated_repair_cost": "$200-$500",
+  "secondary_damage_risk": "Water intrusion",
+  "maintenance_summary": "Cracks in the window frame were noted, which could lead to water damage if not addressed. Recommend sealing the cracks or replacing the frame."
+}

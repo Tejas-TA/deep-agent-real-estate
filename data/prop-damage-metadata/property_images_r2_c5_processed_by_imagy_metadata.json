@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r2_c5_processed_by_imagy.png",
+  "damage_type": "Moss/Mildew Growth",
+  "affected_system": "roofing",
+  "location": "Rear of Property",
+  "severity": 5,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1000-$3000",
+  "secondary_damage_risk": "Structural damage, roof leaks",
+  "maintenance_summary": "Moderate moss/mildew growth on roofing observed, which requires cleaning and possible treatment to prevent future growth. Recommend inspection of roofing material to assess for any further damage."
+}

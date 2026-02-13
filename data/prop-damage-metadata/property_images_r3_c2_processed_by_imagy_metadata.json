@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r3_c2_processed_by_imagy.png",
+  "damage_type": "Surface Efflorescence",
+  "affected_system": "structural",
+  "location": "Exterior Wall",
+  "severity": 4,
+  "urgency": "monitor",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$300-$800",
+  "secondary_damage_risk": "Potential moisture intrusion leading to mold growth",
+  "maintenance_summary": "Surface efflorescence observed indicates possible moisture issues. Recommend monitoring for further signs of water intrusion and evaluating drainage around the foundation."
+}

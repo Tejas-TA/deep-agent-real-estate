@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r4_c3_processed_by_imagy.png",
+  "damage_type": "Corrosion",
+  "affected_system": "plumbing",
+  "location": "Utility Space",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$300-$800",
+  "secondary_damage_risk": "Water leakage, further plumbing failure",
+  "maintenance_summary": "The plumbing fixture shows signs of corrosion and potential leaks. Immediate investigation and repair are recommended to prevent further damage."
+}

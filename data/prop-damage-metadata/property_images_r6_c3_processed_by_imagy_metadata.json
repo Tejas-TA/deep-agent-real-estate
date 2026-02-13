@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r6_c3_processed_by_imagy.png",
+  "damage_type": "Wood Decay",
+  "affected_system": "structural",
+  "location": "Exterior (Near the House)",
+  "severity": 4,
+  "urgency": "short-term",
+  "visible_area_affected": "small",
+  "estimated_repair_cost": "$200-$600",
+  "secondary_damage_risk": "Insect infestation, further decay",
+  "maintenance_summary": "The wooden pole shows signs of decay that should be addressed to prevent further deterioration. Recommend treating with wood preservative and monitoring for insect activity."
+}

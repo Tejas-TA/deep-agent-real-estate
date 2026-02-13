@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r5_c1_processed_by_imagy.png",
+  "damage_type": "HVAC Corrosion",
+  "affected_system": "hvac",
+  "location": "Exterior of Property",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1,500-$3,000",
+  "secondary_damage_risk": "Reduced HVAC efficiency, potential system failure",
+  "maintenance_summary": "The HVAC unit shows visible signs of corrosion and rust, indicating deterioration. It is advisable to clean and repair the unit to restore functionality and prevent further damage. Consideration should be given to replacement if repair costs exceed half the cost of a new unit."
+}

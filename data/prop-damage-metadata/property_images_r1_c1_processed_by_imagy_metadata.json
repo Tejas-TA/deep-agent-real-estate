@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r1_c1_processed_by_imagy.png",
+  "damage_type": "Roof Damage",
+  "affected_system": "roofing",
+  "location": "Roof",
+  "severity": 9,
+  "urgency": "immediate",
+  "visible_area_affected": "large",
+  "estimated_repair_cost": "$3000-$7000",
+  "secondary_damage_risk": "water infiltration leading to interior damage and mold growth",
+  "maintenance_summary": "Significant damage detected with multiple exposed areas on the roof. Immediate repair is recommended to prevent further deterioration and potential water damage to the underlying structures."
+}

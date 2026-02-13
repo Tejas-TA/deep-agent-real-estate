@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r1_c3_processed_by_imagy.png",
+  "damage_type": "Ceiling Damage/Mold",
+  "affected_system": "structural",
+  "location": "Living Room",
+  "severity": 8,
+  "urgency": "immediate",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$2000-$5000",
+  "secondary_damage_risk": "Potential for mold growth and structural integrity issues",
+  "maintenance_summary": "Immediate repair is necessary to address the hole in the ceiling and mold presence. Recommend professional assessment for mold remediation and structural repair."
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r6_c6_processed_by_imagy.png",
+  "damage_type": "Chimney Cracking",
+  "affected_system": "structural",
+  "location": "Exterior, Chimney",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1500-$3000",
+  "secondary_damage_risk": "Water intrusion, further cracking, potential structural integrity issues",
+  "maintenance_summary": "Moderate cracking observed on chimney structure. Recommend inspecting for underlying issues and planning for repairs to prevent further deterioration."
+}

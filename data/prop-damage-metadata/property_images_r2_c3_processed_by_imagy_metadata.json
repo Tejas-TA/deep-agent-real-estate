@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r2_c3_processed_by_imagy.png",
+  "damage_type": "Vertical Wall Crack",
+  "affected_system": "structural",
+  "location": "Exterior Wall",
+  "severity": 8,
+  "urgency": "immediate",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$2000-$5000",
+  "secondary_damage_risk": "Water intrusion, pest infiltration, structural compromise",
+  "maintenance_summary": "The visible crack indicates potential structural issues that may affect the integrity of the wall. Immediate evaluation by a structural engineer is recommended to assess the underlying cause and necessary repairs."
+}

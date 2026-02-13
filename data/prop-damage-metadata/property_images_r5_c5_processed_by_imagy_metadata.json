@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r5_c5_processed_by_imagy.png",
+  "damage_type": "Cracked Concrete Driveway",
+  "affected_system": "structural",
+  "location": "Driveway",
+  "severity": 6,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1000-$3000",
+  "secondary_damage_risk": "Further cracking leading to trip hazards or vehicle damage",
+  "maintenance_summary": "The driveway shows visible cracks which indicate moderate structural damage. Repairs should be undertaken to prevent further deterioration and to ensure safety."
+}

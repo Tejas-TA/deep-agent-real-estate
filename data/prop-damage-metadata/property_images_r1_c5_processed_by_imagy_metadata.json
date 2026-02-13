@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r1_c5_processed_by_imagy.png",
+  "damage_type": "Roof Hole",
+  "affected_system": "roofing",
+  "location": "Roof",
+  "severity": 10,
+  "urgency": "immediate",
+  "visible_area_affected": "large",
+  "estimated_repair_cost": "$1500-$3000",
+  "secondary_damage_risk": "Water intrusion, structural damage, mold growth",
+  "maintenance_summary": "Critical hole in roofing requiring immediate repair to prevent further water damage and structural issues. Recommend consulting a licensed roofing contractor for replacement of damaged tiles and sealing."
+}

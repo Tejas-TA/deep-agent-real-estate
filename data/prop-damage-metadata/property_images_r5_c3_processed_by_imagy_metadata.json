@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r5_c3_processed_by_imagy.png",
+  "damage_type": "Concrete Cracking",
+  "affected_system": "structural",
+  "location": "Driveway",
+  "severity": 5,
+  "urgency": "short-term",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$300-$800",
+  "secondary_damage_risk": "Further cracking, potential trip hazard",
+  "maintenance_summary": "Cracks in the concrete indicate some level of structural stress. It is advisable to seal the cracks and evaluate underlying causes to prevent further damage."
+}

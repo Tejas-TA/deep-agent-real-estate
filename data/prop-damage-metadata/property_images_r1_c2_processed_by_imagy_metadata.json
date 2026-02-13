@@ -1,0 +1,12 @@
+{
+  "file_name": "property_images_r1_c2_processed_by_imagy.png",
+  "damage_type": "Mold Growth",
+  "affected_system": "structural",
+  "location": "Ceiling",
+  "severity": 8,
+  "urgency": "immediate",
+  "visible_area_affected": "medium",
+  "estimated_repair_cost": "$1500-$3000",
+  "secondary_damage_risk": "Potential health risks, additional structural damage",
+  "maintenance_summary": "Mold growth indicates prolonged moisture exposure; immediate remediation is recommended to prevent health hazards and severe structural issues."
+}
