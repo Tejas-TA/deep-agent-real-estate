@@ -26,6 +26,12 @@ dependencies = [
   "ipywidgets",
   "gradio",
   "packaging",
+  "xgboost>=3.2.0",
+  "matplotlib",
+  "seaborn",
+  "plotly",
+  "dash",
+  "shap",
 ]
 
 [project.optional-dependencies]
