@@ -9,7 +9,7 @@ authors = [
   { name = "Tejas T A" },
 ]
 dependencies = [
-  "numpy",
+  "numpy<2.4",
   "pandas",
   "scikit-learn",
   "torch",
@@ -31,7 +31,10 @@ dependencies = [
   "seaborn",
   "plotly",
   "dash",
-  "shap",
+  "optuna>=4.7.0",
+  "shap>=0.50.0",
+  "numba>=0.60.0",
+  "llvmlite>=0.43.0",
 ]
 
 [project.optional-dependencies]
