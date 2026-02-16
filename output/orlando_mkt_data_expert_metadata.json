@@ -1,1 +1,6 @@
-{"model_id": "ft:gpt-4o-mini-2024-07-18:personal::D9f85khV", "system_prompt": "You are an Orlando real estate expert.", "project": "In-House Orlando Market Data Expert", "date_trained": "2026-02-15"}
+{
+  "model_id": "ft:gpt-4o-mini-2024-07-18:personal::D9f85khV",
+  "system_prompt": "You are an Orlando real estate expert.",
+  "project": "In-House Orlando Market Data Expert",
+  "date_trained": "2026-02-15"
+}
