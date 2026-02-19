@@ -39,6 +39,8 @@ dependencies = [
   "langchain-mcp-adapters>=0.1.7",
   "langgraph>=0.1.0",
   "pyreadline3",
+  "langchain",
+  "streamlit",
 ]
 
 [project.optional-dependencies]

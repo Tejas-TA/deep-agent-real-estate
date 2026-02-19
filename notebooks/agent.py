@@ -18,8 +18,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from langchain_mcp_adapters.client import MultiServerMCPClient
-from langchain.agents import create_agent
-
+from langgraph.prebuilt import create_react_agent
 
 load_dotenv()
 
@@ -56,7 +55,6 @@ Guidelines:
 - Be concise but thorough
 """
 
-
 # ============================================================================
 # HELPERS
 # ============================================================================
@@ -83,7 +81,6 @@ def _print_node(step: int, node_name: str, state: dict) -> str:
             print(f"  👤 Human: {str(msg.content)[:200]}")
     return final
 
-
 async def _build_agent():
     """Initialise MCP client, load tools, return (agent, tools)."""
     mcp_client = MultiServerMCPClient(MCP_CONFIG)
@@ -92,7 +89,6 @@ async def _build_agent():
     agent = create_react_agent(model=llm, tools=tools, prompt=SYSTEM_PROMPT)
     return agent, tools
 
-
 # ============================================================================
 # SINGLE-QUERY RUNNER
 # ============================================================================
@@ -100,16 +96,13 @@ async def _build_agent():
 async def run_agent(query: str, verbose: bool = True) -> str:
     """Run one query, stream graph node states, return final answer."""
     agent, tools = await _build_agent()
-
     if verbose:
         print(f"\n🔧 Tools loaded: {[t.name for t in tools]}")
         print("=" * 60)
         print(f"Query: {query}")
         print("=" * 60)
-
     final_response = ""
     step = 0
-
     async for chunk in agent.astream(
         {"messages": [HumanMessage(content=query)]},
         stream_mode="updates",
@@ -124,15 +117,12 @@ async def run_agent(query: str, verbose: bool = True) -> str:
                 for msg in state.get("messages", []):
                     if isinstance(msg, AIMessage) and msg.content and not msg.tool_calls:
                         final_response = msg.content
-
     if verbose:
         print("\n" + "=" * 60)
-        print("✅ Final Answer:")
+        print("Final Answer:")
         print("=" * 60)
         print(final_response)
-
     return final_response
-
 
 # ============================================================================
 # INTERACTIVE LOOP
@@ -140,37 +130,29 @@ async def run_agent(query: str, verbose: bool = True) -> str:
 
 async def interactive_loop():
     """REPL session — maintains conversation history across turns."""
-    print("\n🏠 Orlando Real Estate AI Agent")
+    print("\n Orlando Real Estate AI Agent")
     print("Type your question or 'quit' to exit.\n")
-
     agent, tools = await _build_agent()
-    print(f"✅ {len(tools)} tools ready: {[t.name for t in tools]}\n")
-
+    print(f"{len(tools)} tools ready: {[t.name for t in tools]}\n")
     messages = []
-
     while True:
         try:
             user_input = input("You: ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\nGoodbye!")
             break
-
         if not user_input:
             continue
         if user_input.lower() in ("quit", "exit", "q"):
             print("Goodbye!")
             break
-
         messages.append(HumanMessage(content=user_input))
-
         print()
         step = 0
         final_answer = ""
 
         async for chunk in agent.astream(
-            {"messages": messages},
-            stream_mode="updates",
-        ):
+            {"messages": messages},stream_mode="updates",):
             step += 1
             for node_name, state in chunk.items():
                 answer = _print_node(step, node_name, state)
@@ -179,7 +161,6 @@ async def interactive_loop():
 
         print(f"\nAgent: {final_answer}\n")
         messages.append(AIMessage(content=final_answer))
-
 
 # ============================================================================
 # ENTRY POINT
