@@ -41,6 +41,7 @@ dependencies = [
   "pyreadline3",
   "langchain",
   "streamlit",
+  "langsmith",
 ]
 
 [project.optional-dependencies]
