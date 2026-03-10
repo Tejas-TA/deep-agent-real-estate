@@ -1,7 +1,7 @@
 # Deep Agent: AI-Powered Real Estate Orchestrator
 
 ![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue?style=flat)
-![AI Framework](https://img.shields.io/badge/AI-LangGraph%20%7C%20MCP-purple?style=flat)
+![AI Framework](https://img.shields.io/badge/AI-LangGraph%20%7C%20MCP%20%7C%20A2A-purple?style=flat)
 ![ML Framework](https://img.shields.io/badge/ML-XGBoost%20%7C%20Optuna-orange?style=flat)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)
 
@@ -58,7 +58,7 @@ This project is built around the **ReAct (Reasoning and Acting)** framework, man
 | **Foundation Models** | GPT-4o, GPT-4o-mini, `text-embedding-3-small` |
 | **Machine Learning** | XGBoost, Scikit-Learn, Optuna, SHAP |
 | **Vector DB / Search** | Pinecone |
-| **Backend & APIs** | Model Context Protocol (MCP), FastAPI, Pydantic |
+| **Backend & APIs** | MCP, A2A, FastAPI, Pydantic |
 | **Data Pipeline** | Pandas, Numpy, Pillow (PIL), OpenStreetMap |
 | **DevOps / MLOps** | `uv` (Dependency Management), LangSmith, `.env` config |
 
