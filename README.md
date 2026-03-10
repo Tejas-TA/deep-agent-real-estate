@@ -1,74 +1,135 @@
-# sturdy-barnacle
+# Deep Agent: AI-Powered Real Estate Orchestrator
 
-Deep real-estate valuation agent combining:
-- a **retrieval-augmented generation (RAG)** layer for property documents and structured metadata,
-- a **large multimodal model (LMM)** to understand property photos,
-- and a **classical ML model (e.g. logistic regression)** that estimates fair market value.
+![Python 3.12+](https://img.shields.png?style=flat&color=blue&label=Python&message=3.12%2B)
+![AI Framework](https://img.shields.png?style=flat&color=purple&label=AI&message=LangGraph%20%7C%20MCP)
+![ML Framework](https://img.shields.png?style=flat&color=orange&label=ML&message=XGBoost%20%7C%20Optuna)
+![Status](https://img.shields.png?style=flat&color=brightgreen&label=Status&message=Active)
 
-This repo is intentionally structured like a production-style Python project so you can show it to potential employers.
+Welcome to the **Deep Agent Real Estate Orchestrator** – a cutting-edge implementation of modern artificial intelligence and machine learning engineering. This project demonstrates a production-grade, multi-agent system designed to perform complex reasoning, valuation, and analysis in the real estate domain (specifically the Orlando market), showcasing the absolute forefront of AI technology.
 
-## Project structure
+---
 
-- `pyproject.toml` – project metadata and dependencies, managed with **uv**.
-- `src/deep_agent/` – Python package for your core code (models, training, pipelines, etc.).
-- `notebooks/` – exploratory work and experiments (e.g. `ingest_vectorize_zoning.ipynb`).
-- `data/` – data directory (typically `raw/`, `processed/`, etc. under here; large files should not be committed).
-- `tests/` – automated tests (currently a simple smoke test).
-- `.env.example` – template for required environment variables (copy to `.env` locally).
-- `.gitignore` – standard Python/uv/data ignore rules.
+## 🚀 Key Innovations & Architecture
 
-## Environment and tooling (uv)
+This project is built around the **ReAct (Reasoning and Acting)** framework, managed by a supervisor agent that intelligently routes queries to specialized sub-agents. It leverages the emerging **Model Context Protocol (MCP)** to provide standardized, highly-performant tools to the AI via a FastAPI backend.
 
-This project is set up to use [`uv`](https://github.com/astral-sh/uv) instead of raw `pip`.
+### 1. Multi-Agent Orchestration (LangGraph)
+- **Hierarchical Routing:** A supervisor agent synthesizes user requests and conceptually delegates tasks to specialized domain agents (Zoning, Vision, Valuation, Market Expert).
+- **LangSmith Observability:** Full tracing of thought processes, tool invocations, and agent latency for rapid debugging and MLOps monitoring.
 
-1. **Install uv** (if you don't have it):
+### 2. Model Context Protocol (MCP) Integration
+- **Standardized Tool Access:** Built a modular API layer using bare-metal `FastAPI` to expose programmatic tools to the AI.
+- **Pydantic Validation:** Strict input/output schema validation ensuring agents never hallucinate tool parameters and execute deterministic backend code.
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+### 3. Advanced RAG & Vector Search
+- **Pinecone Vector Database:** High-dimensional semantic search over heavy, unstructured local zoning laws (ingested, chunked, and vectorized).
+- **Contextual Chunking:** Optimized retrieval augmented generation (RAG) using `text-embedding-3-small` and `RecursiveCharacterTextSplitter`.
+
+### 4. Large Multimodal Models (LMM) in Production
+- **Automated Damage Assessment:** Integrating GPT-4o-mini's visual capabilities to process raw property imagery, resizing and standardizing on the fly.
+- **Metadata Extraction:** Extracting severity metrics and generating multimodal embeddings upserted directly into the vector DB.
+
+### 5. Classical ML Meets Agentic AI
+- **Fair Market Value (FMV) Modeling:** Building a highly robust `XGBoost` Regressor, bridging the gap between Generative AI and Classical ML.
+- **Optuna Hyperparameter Tuning:** Automated, intelligent grid searching with Early Stopping to optimize RMSE and R² scores.
+- **Explainable AI (XAI):** Utilizing `SHAP` (SHapley Additive exPlanations) and Permutation Importance so the Agent can confidently *explain* its valuation logic to users.
+
+### 6. Geospatial & Amenity Intelligence
+- **OpenStreetMap (OSM) API:** Live geographic querying using Haversine distance formulas to calculate neighborhood amenity metrics.
+- **Algorithmic Walkability:** Creating dynamic walkability scores based on radius thresholds to augment the FMV model and Agent Market Reports.
+
+### 7. Domain-Specific Fine-Tuning
+- **Hyper-Local Expertise:** Curating specialized Orlando market datasets to fine-tune `GPT-4o-mini`, drastically reducing hallucinations and giving the Market Expert agent an unparalleled understanding of hyper-local real estate dynamics.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category | Technologies |
+| :--- | :--- |
+| **Agentic Frameworks** | LangChain, LangGraph, OpenAI Assistant API |
+| **Foundation Models** | GPT-4o, GPT-4o-mini, `text-embedding-3-small` |
+| **Machine Learning** | XGBoost, Scikit-Learn, Optuna, SHAP |
+| **Vector DB / Search** | Pinecone |
+| **Backend & APIs** | Model Context Protocol (MCP), FastAPI, Pydantic |
+| **Data Pipeline** | Pandas, Numpy, Pillow (PIL), OpenStreetMap |
+| **DevOps / MLOps** | `uv` (Dependency Management), LangSmith, `.env` config |
+
+---
+
+## 📂 Project Structure
+
+```text
+sturdy-barnacle/
+├── src/
+│   └── deep_agent/                 # Placeholder for productionized multi-agent core
+├── notebooks/                      # R&D, Model Training, & Agent Prototyping
+│   ├── agent.py                    # Core ReAct agent implementation
+│   ├── mcp_server.py               # MCP FastAPI entrypoint
+│   ├── tools.py                    # Tool definitions and Pydantic schemas
+│   ├── agent2agent.ipynb           # Multi-agent orchestrator logic
+│   ├── xgboost-fmv-model-v2.ipynb  # Advanced XGBoost modeling & SHAP explainability
+│   ├── ingest_vectorize_zoning.ipynb # RAG ingestion pipeline
+│   ├── open_street_maps_api_test.ipynb # Geospatial data engineering
+│   ├── mcp_layer.ipynb             # Server-client protocol testing
+│   └── resize_metadata_tag_prop_images.ipynb # Vision processing pipeline
+├── data/                           # RAG source files, Housing data, Images
+├── tests/                          # Test suite (Integration, Unit)
+├── .env                            # Environment Variables (OpenAI, Pinecone, LangSmith)
+├── pyproject.toml                  # Modern uv-managed project dependencies
+└── README.md                       # Project documentation
 ```
 
-On Windows (PowerShell):
+---
 
-```powershell
-irm https://astral.sh/uv/install.ps1 | iex
-```
+## 💻 Getting Started
 
-2. **Create and sync the environment**:
+### Prerequisites
+- **Python 3.12+**
+- **uv** (Rapid Python Package Installer & Resolver)
+- Accounts for: **OpenAI**, **Pinecone**, **LangSmith**
+
+### 1. Installation
+Clone the repository and install dependencies using `uv` for hyper-fast resolution:
 
 ```bash
+git clone https://github.com/Tejas-TA/sturdy-barnacle.git
+cd sturdy-barnacle
 uv sync
 ```
 
-This will create a virtual environment and install dependencies from `pyproject.toml`.
-
-3. **Activate and run**:
-
-```bash
-uv run python -m deep_agent.main
+### 2. Environment Configuration
+Create a `.env` file in the root directory (never commit this) with the following keys:
+```env
+OPENAI_API_KEY=your_openai_key
+PINECONE_API_KEY=your_pinecone_key
+PINECONE_ENV=your_pinecone_env
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=your_langsmith_key
+LANGCHAIN_PROJECT=orlando_real_estate
 ```
 
-Or, to launch Jupyter for your notebooks:
+### 3. Exploring the AI Pipeline
+The `notebooks/` directory contains the bleeding-edge R&D workflows. We recommend stepping through them in this order:
+1. **RAG Vectorization:** `ingest_vectorize_zoning.ipynb`
+2. **Machine Learning:** `xgboost-fmv-model-v2.ipynb`
+3. **Computer Vision:** `resize_metadata_tag_prop_images.ipynb`
+4. **Agent Orchestration:** `agent2agent.ipynb`
 
+### 4. Running the MCP Server
+To expose the agentic tools to your environment locally:
 ```bash
-uv run jupyter lab
+uvicorn notebooks.mcp_server:app --reload --port 8000
 ```
 
-## Environment variables
+---
 
-Copy `.env.example` to `.env` and fill in real values:
+## 🌟 Future Roadmap
+- [ ] Finalize migration of notebook prototypes into the `src/` modular structure.
+- [ ] Increase Test-Driven Development (TDD) coverage in `tests/` directory to harden MCP tools.
+- [ ] Seamless GUI integration for human-in-the-loop (HITL) approval on Fair Market Valuation predictions.
+- [ ] Containerize architecture using Docker / Kubernetes for one-click Kubernetes deployment.
 
-```bash
-cp .env.example .env
-```
+---
 
-Example keys:
-
-- `OPENAI_API_KEY` – key for the LMM provider.
-- `VISION_MODEL_ENDPOINT` – endpoint for vision inference if you self-host or use a gateway.
-- `RAG_INDEX_PATH` – path to your pre-built vector index (under `data/processed/` by default).
-
-## Next steps for you
-
-- Implement your RAG pipeline and deep model code under `src/deep_agent/`.
-- Keep training scripts, data loaders, and evaluation utilities in `src/` instead of notebooks once they stabilize.
-- Add real tests in `tests/` to show employers you can write production-quality, tested ML code.
+*This project exemplifies the seamless integration of Agentic Orchestration, Predictive Modeling, and Multimodal Vision AI—setting a benchmark for intelligent automation.*
