@@ -1,9 +1,9 @@
 # Deep Agent: AI-Powered Real Estate Orchestrator
 
-![Python 3.12+](https://img.shields.png?style=flat&color=blue&label=Python&message=3.12%2B)
-![AI Framework](https://img.shields.png?style=flat&color=purple&label=AI&message=LangGraph%20%7C%20MCP)
-![ML Framework](https://img.shields.png?style=flat&color=orange&label=ML&message=XGBoost%20%7C%20Optuna)
-![Status](https://img.shields.png?style=flat&color=brightgreen&label=Status&message=Active)
+![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue?style=flat)
+![AI Framework](https://img.shields.io/badge/AI-LangGraph%20%7C%20MCP-purple?style=flat)
+![ML Framework](https://img.shields.io/badge/ML-XGBoost%20%7C%20Optuna-orange?style=flat)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)
 
 Welcome to the **Deep Agent Real Estate Orchestrator** – a cutting-edge implementation of modern artificial intelligence and machine learning engineering. This project demonstrates a production-grade, multi-agent system designed to perform complex reasoning, valuation, and analysis in the real estate domain (specifically the Orlando market), showcasing the absolute forefront of AI.
 
@@ -11,15 +11,22 @@ Welcome to the **Deep Agent Real Estate Orchestrator** – a cutting-edge implem
 
 ## 🚀 Key Innovations & Architecture
 
-This project is built around the **ReAct (Reasoning and Acting)** framework, managed by a supervisor agent that intelligently routes queries to specialized sub-agents. It leverages the emerging **Model Context Protocol (MCP)** to provide standardized, highly-performant tools to the AI via a FastAPI backend.
+This project is built around the **ReAct (Reasoning and Acting)** framework, managed by a supervisor agent that intelligently routes queries to specialized sub-agents. It leverages the emerging **Model Context Protocol (MCP)** and **Agent to Agent protocol (A2A)** to provide standardized, highly-performant tools to the AI via a FastAPI backend.
 
 ### 1. Multi-Agent Orchestration (LangGraph)
 - **Hierarchical Routing:** A supervisor agent synthesizes user requests and conceptually delegates tasks to specialized domain agents (Zoning, Vision, Valuation, Market Expert).
 - **LangSmith Observability:** Full tracing of thought processes, tool invocations, and agent latency for rapid debugging and MLOps monitoring.
 
-### 2. Model Context Protocol (MCP) Integration
+### 2. MCP and A2A Integration
 - **Standardized Tool Access:** Built a modular API layer using bare-metal `FastAPI` to expose programmatic tools to the AI.
 - **Pydantic Validation:** Strict input/output schema validation ensuring agents never hallucinate tool parameters and execute deterministic backend code.
+- **Intent Parsing & Semantic Routing:** The top-level Supervisor Node intercepts raw user queries and semantically determines which specialized sub-agent (or combination of agents) is required to fulfill the request.
+- **Specialized Worker Nodes:** The Supervisor dispatches precise context payloads to isolated worker nodes, including:
+  - **Zoning Expert:** Dedicated to querying the RAG Pinecone index.
+  - **Vision Assessor:** Dedicated to processing LMM image classification.
+  - **Valuation Analyst:** Dedicated to querying the XGBoost pipeline.
+  - **Market Guide:** Dedicated to querying the fine-tuned LLM.
+- **State Graph Orchestration:** LangGraph maintains a strict `State` object that flows between nodes, ensuring that an agent can request more information from another agent before synthesizing a final, comprehensive response back to the user. This enforces separation of concerns and dramatically reduces hallucinations at scale.
 
 ### 3. Advanced RAG & Vector Search
 - **Pinecone Vector Database:** High-dimensional semantic search over heavy, unstructured local zoning laws (ingested, chunked, and vectorized).
@@ -110,7 +117,7 @@ LANGCHAIN_PROJECT=orlando_real_estate
 ```
 
 ### 3. Exploring the AI Pipeline
-The `notebooks/` directory contains the bleeding-edge R&D workflows. We recommend stepping through them in this order:
+The `notebooks/` directory contains the bleeding-edge R&D workflows. I recommend stepping through them in this order:
 1. **RAG Vectorization:** `ingest_vectorize_zoning.ipynb`
 2. **Machine Learning:** `xgboost-fmv-model-v2.ipynb`
 3. **Computer Vision:** `resize_metadata_tag_prop_images.ipynb`
@@ -132,4 +139,4 @@ uvicorn notebooks.mcp_server:app --reload --port 8000
 
 ---
 
-*This project exemplifies the seamless integration of Agentic Orchestration, Predictive Modeling, and Multimodal Vision AI—setting a benchmark for intelligent automation.*
+*This project exemplifies the seamless integration of Agentic Orchestration, Predictive Modeling, and Multimodal Vision AI-setting a benchmark for intelligent automation.*
