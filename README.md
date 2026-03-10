@@ -5,7 +5,7 @@
 ![ML Framework](https://img.shields.io/badge/ML-XGBoost%20%7C%20Optuna-orange?style=flat)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)
 
-Welcome to the **Deep Agent Real Estate Orchestrator** – a cutting-edge implementation of modern artificial intelligence and machine learning engineering. This project demonstrates a production-grade, multi-agent system designed to perform complex reasoning, valuation, and analysis in the real estate domain (specifically the Orlando market), showcasing the absolute forefront of AI.
+Welcome to the **Deep Agent Real Estate Orchestrator** – a cutting-edge implementation of modern AI and ML. This project demonstrates a production-grade, multi-agent system designed to perform complex reasoning, valuation, and analysis combining classical ML, RAG, vision AI, and geospatial analysis
 
 ---
 
